@@ -1,0 +1,26 @@
+{
+  "name": "app1",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "vite --port 5002 --strictPort",
+    "build": "tsc && vite build",
+    "preview": "vite preview --port 5002 --strictPort",
+    "serve": "vite serve --port 5002 --strictPort",
+    "types": "rm -rf types && tsc -p tsconfig.types.json && cp types-package.json types/package.json"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.2.1",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0"
+  }
+}
