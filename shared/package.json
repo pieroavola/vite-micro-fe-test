@@ -1,0 +1,30 @@
+{
+  "name": "shared",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/shared.umd.cjs",
+  "module": "./dist/shared.js",
+  "types": "./dist/index.d.ts",
+  "__exports": {
+    ".": {
+      "import": "./dist/shared.js",
+      "require": "./dist/shared.umd.cjs"
+    }
+  },
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "jotai": "^2.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0",
+    "vite-plugin-dts": "^2.2.0"
+  }
+}

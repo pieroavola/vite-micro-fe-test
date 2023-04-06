@@ -14,7 +14,7 @@ export default defineConfig({
             exposes: {
                 './App2': './src/App2.tsx',
             },
-            shared: ['react', 'react-dom']
+            shared: ['react', 'react-dom', 'jotai', 'shared']
         }),
     ],
 })

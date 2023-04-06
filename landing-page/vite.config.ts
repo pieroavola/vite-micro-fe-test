@@ -9,10 +9,10 @@ export default defineConfig({
         federation({
             name: "landing-page",
             remotes: {
-                app1: "http://localhost:5001/assets/remoteEntry.js",
-                app2: "http://localhost:5002/assets/remoteEntry.js",
+                app1: "http://127.0.0.1:5001/assets/remoteEntry.js",
+                app2: "http://127.0.0.1:5002/assets/remoteEntry.js",
             },
-            shared: ["react", "react-dom"],
+            shared: ["react", "react-dom", 'jotai', 'shared'],
         }),
     ],
     build: {
@@ -20,6 +20,6 @@ export default defineConfig({
         target: 'esnext',
     },
     resolve: {
-        dedupe: ["react", "react-dom"]
+        dedupe: ["react", "react-dom", 'jotai']
     }
 })
