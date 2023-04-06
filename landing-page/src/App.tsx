@@ -20,7 +20,16 @@ function App() {
                     <NavLink to={"app1"} style={{marginRight: "10px"}}>App 1</NavLink>
                     <NavLink to={"app2"}>App 2</NavLink>
                 </p>
-                <UserContext.Provider value={{user, setUser}}>
+                <p>
+                    <button onClick={() =>
+                        setUser({
+                            username: crypto.randomUUID(),
+                            roles: [] as unknown as [string],
+                        })
+                    }>Change User
+                    </button>
+                </p>
+                <UserContext.Provider value={{user}}>
                     <Routes>
                         <Route path="/app1/*" element={
                             <>

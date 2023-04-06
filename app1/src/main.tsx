@@ -9,8 +9,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
         <UserContext.Provider value={{
             user: {username: "standalone", roles: ["USER"]},
-            setUser: (_) => {
-            },
         }}>
             <BrowserRouter basename="/app1">
                 <App1/>

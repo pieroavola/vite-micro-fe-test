@@ -7,10 +7,6 @@ export interface User {
 
 export type UserContextType = {
     user?: User;
-    setUser: (user: User) => void;
 }
 
-export const UserContext = React.createContext<UserContextType>({
-    setUser: (_) => {
-    },
-});
+export const UserContext = React.createContext<UserContextType>({});
