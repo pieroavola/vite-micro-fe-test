@@ -4,6 +4,7 @@ import App2 from "app2/App2";
 import {UserContext} from "shared";
 import {useState} from "react";
 import {User} from "shared/dist/user";
+import {BrowserRouter, NavLink, Route, Routes} from "react-router-dom";
 
 function App() {
 
@@ -13,12 +14,28 @@ function App() {
     })
 
     return (
-        <div className="App">
-            <UserContext.Provider value={{user, setUser}}>
-                <App1/>
-                <App2/>
-            </UserContext.Provider>
-        </div>
+        <BrowserRouter>
+            <div className="App">
+                <p>
+                    <NavLink to={"app1"} style={{marginRight: "10px"}}>App 1</NavLink>
+                    <NavLink to={"app2"}>App 2</NavLink>
+                </p>
+                <UserContext.Provider value={{user, setUser}}>
+                    <Routes>
+                        <Route path="/app1/*" element={
+                            <>
+                                <App1/>
+                            </>
+                        }/>
+                        <Route path="/app2/*" element={
+                            <>
+                                <App2/>
+                            </>
+                        }/>
+                    </Routes>
+                </UserContext.Provider>
+            </div>
+        </BrowserRouter>
     )
 }
 

@@ -12,7 +12,7 @@ export default defineConfig({
                 app1: "http://127.0.0.1:5001/assets/remoteEntry.js",
                 app2: "http://127.0.0.1:5002/assets/remoteEntry.js",
             },
-            shared: ["react", "react-dom", 'jotai', 'shared'],
+            shared: ["react", "react-dom", 'jotai', 'shared', "react-router-dom"],
         }),
     ],
     build: {

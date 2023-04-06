@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App1 from './App1'
 import './index.css'
 import {UserContext} from "shared";
+import {BrowserRouter} from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
@@ -11,7 +12,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
             setUser: (_) => {
             },
         }}>
-            <App1/>
+            <BrowserRouter basename="/app1">
+                <App1/>
+            </BrowserRouter>
         </UserContext.Provider>
     </React.StrictMode>,
 )
